@@ -1,0 +1,25 @@
+
+<div class="jumbotron text-center">
+  <h1>Scrape Emails</h1> 
+  <p>Add proper URL and get site Email.</p> 
+  <%= form_tag(get_data_path, {:class=>"form-inline", :remote => true}) do %>
+  	<div class="input-group">
+  		<%= text_field_tag :url, params[:url], :placeholder => "URL", :class=>"form-control", :required => true,:size=>"50", :value=>"https://ahmedabad.craigslist.co.in/" %>
+  		<div class="input-group-btn">
+        <%= submit_tag "Get Data", class: "btn btn-success" %>
+      </div>
+  		
+  	</div>	
+  <%end%>
+</div>
+
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12" id="email_data">
+     
+    </div>
+  </div>
+</div>
+
+
+
